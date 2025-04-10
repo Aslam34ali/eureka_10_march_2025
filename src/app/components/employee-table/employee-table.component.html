@@ -1,0 +1,27 @@
+<table class="table table-bordered mt-2">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.phone}}</td>
+        <td>{{emp.address.city}}</td>
+        <td>
+          <button class="btn btn-info btn-sm me-1" (click)="onView(emp)">View</button>
+          <button class="btn btn-danger btn-sm" (click)="onDelete(emp)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

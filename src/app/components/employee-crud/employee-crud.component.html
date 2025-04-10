@@ -1,0 +1,76 @@
+<!-- Add Employee Button -->
+<button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#addEmpModal">
+    + Add Employee
+  </button>
+  
+  <!-- Employee Table -->
+  <table class="table table-bordered mt-2">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.phone}}</td>
+        <td>{{emp.address.city}}</td>
+        <td>
+          <button class="btn btn-info btn-sm me-1" (click)="viewDetails(emp)">View</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteEmployee(emp)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- View Employee Modal -->
+  <div class="modal fade" id="empModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Employee Details</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Name:</strong> {{selectedEmployee?.name}}</p>
+          <p><strong>Email:</strong> {{selectedEmployee?.email}}</p>
+          <p><strong>Phone:</strong> {{selectedEmployee?.phone}}</p>
+          <p><strong>City:</strong> {{selectedEmployee?.address?.city}}</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add Employee Modal -->
+  <div class="modal fade" id="addEmpModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Employee</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input class="form-control mb-2" [(ngModel)]="newEmployee.name" placeholder="Name">
+          <input class="form-control mb-2" [(ngModel)]="newEmployee.username" placeholder="Username">
+          <input class="form-control mb-2" [(ngModel)]="newEmployee.email" placeholder="Email">
+          <input class="form-control mb-2" [(ngModel)]="newEmployee.phone" placeholder="Phone">
+          <input class="form-control mb-2" [(ngModel)]="newEmployee.address.city" placeholder="City">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" (click)="addEmployeeFromModal()">Add Employee</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

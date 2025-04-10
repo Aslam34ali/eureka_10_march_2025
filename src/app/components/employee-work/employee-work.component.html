@@ -1,0 +1,31 @@
+<div>
+    <h2>Employee Work Operations</h2>
+  
+    <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#addEmpModal">
+      + Add Employee
+    </button>
+  
+    <app-employee-table [employees]="employees" (delete)="deleteEmployee($event)" (view)="viewDetails($event)"></app-employee-table>
+    <app-employee-add [(employee)]="newEmployee" (add)="addEmployee()"></app-employee-add>
+  
+    <div class="modal fade" id="empModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Employee Details</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Name:</strong> {{selectedEmployee?.name}}</p>
+            <p><strong>Email:</strong> {{selectedEmployee?.email}}</p>
+            <p><strong>Salary:</strong> {{selectedEmployee?.salary}}</p>
+            <p><strong>Phone:</strong> {{selectedEmployee?.phone}}</p>
+            <p><strong>City:</strong> {{selectedEmployee?.address?.city}}</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

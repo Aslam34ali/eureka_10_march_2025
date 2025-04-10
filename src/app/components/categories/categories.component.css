@@ -1,0 +1,42 @@
+
+    .category-bar {
+      background-color: #f6f7f8;
+      border-top: 1px solid #0071dc;
+      padding: 0.5rem 1rem;
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+    }
+
+    .category-bar .nav-link {
+      color: #002f6c;
+      font-weight: 500;
+      margin-right: 1rem;
+      white-space: nowrap;
+    }
+
+    .dropdown-menu-title {
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 0.5rem;
+    }
+
+    .dropdown-menu.departments-dropdown {
+      width: 300px;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .dropdown-menu.departments-dropdown li a {
+      color: #333;
+      padding: 0.4rem 0;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .dropdown-menu.departments-dropdown li a:hover {
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+ 

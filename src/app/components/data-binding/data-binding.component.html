@@ -1,0 +1,67 @@
+<!-- 1. Have a paragraph & a toggle button, on click of the button control the visibility(Show/Hide) of the paragraph -->
+<p [hidden]="isVisible">
+    Angular is a web framework that empowers developers to build fast, reliable applications. Maintained by a dedicated team at Google, 
+    Angular provides a broad suite of tools, APIs, and libraries to simplify and streamline your development workflow.
+</p>
+<button (click)="toggleParagraph()" >
+    {{ isVisible ? 'Show': 'Hide'}} paragraph
+</button>
+
+
+
+<!-- Create a text-area with maxLength=100, as the user keeps typing display updated Remaining characters. -->
+<textarea [(ngModel)]="text" maxlength="100"  cols="40" rows="5" (input)="countwords()"></textarea>
+<h4>Remaining balance : {{count}}</h4>
+
+
+
+<!-- 3. Create dropdown with state names, when user changes dropdown value, print the selected dropdown value in a paragraph -->
+
+<label for="states">Select State:</label>
+<select id="states" [(ngModel)]="state">
+    <option value="Texas">Texas</option>
+    <option value="Missouri">Missouri</option>
+    <option value="New York">New York</option>
+    <option value="New Jersey">New Jersey</option>
+</select>
+<h4> Your selected state is </h4><h3>  {{state}}  </h3>
+
+
+<!-- 4. have 2 inputBoxes, and a dropdown(+,-,*,/) and perform arithmetic operations -->
+
+<label>Number 1:</label>
+  <input type=number [(ngModel)]="n1" />
+
+  <label>Number 2:</label>
+  <input type=number [(ngModel)]="n2"/>
+
+  <label >Operation:</label>
+  <select [(ngModel)]="operation" >
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+
+  <button (click)="calculate()">Calculate</button>
+
+  <h4>Result:</h4><h3> {{ result }}</h3>
+
+
+
+<!-- Toggle button to switch between text and password -->
+
+<input [(ngModel)]="password" [type]="pass ? 'text' : 'password'"/>
+<button (click)="passDisplay()">
+  {{ pass ? 'Hide' : 'Show' }} Password
+</button>
+
+
+<!-- Buttons for increment, decrement, and reset -->
+<h4> Counter: {{ counter }} </h4>
+  
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<button (click)="reset()">Reset</button>
+
+<!---->

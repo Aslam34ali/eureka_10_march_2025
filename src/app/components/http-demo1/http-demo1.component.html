@@ -1,0 +1,38 @@
+<h3 class="text-center fw-bold">User List</h3>
+<hr />
+
+<div class="text-center mb-3">
+  <button class="btn btn-primary" (click)="fetchUserData_angular()">Fetch User data</button>
+</div>
+
+<!-- Loading Indicator -->
+@if (isLoading) {
+  <div class="text-center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" alt="Loading..." />
+  </div>
+}
+
+<!-- User Cards -->
+@if (!isLoading && users.length > 0) {
+  <div class="container">
+    <div class="row">
+      @for (user of users; track user.id) {
+        <div class="col-sm-3 mb-4">
+          <div class="card text-center shadow-sm">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQfF_VvADcrR8iGtgkBBunroA3XqMtjv7fe61gJZJA5suDEu2Gr4BY79rHJ30H-GaP0AA&usqp=CAU"
+              class="card-img-top" alt="User Image">
+            <div class="card-body">
+              <h5 class="card-title">{{ user.username }}</h5>
+              <p class="card-text">Name: {{ user.name }}</p>
+              <p class="card-text">Email: {{ user.email }}</p>
+              <p class="card-text">Phone: {{ user.phone }}</p>
+              <p class="card-text">City: {{ user.address.city }}</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+}

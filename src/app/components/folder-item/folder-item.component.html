@@ -1,0 +1,17 @@
+<div class="ms-3">
+  <div (click)="expanded = !expanded"
+       [class.fw-bold]="node.isFolder"
+       class="d-flex align-items-center gap-2"
+       style="cursor: pointer;">
+
+       <i class="fa-solid"
+       [ngClass]="node.isFolder ? 'fa-folder text-warning' : 'fa-file file-icon-outline'"></i>
+    {{ node.name }}
+  </div>
+
+  <div *ngIf="expanded && node.items">
+    @for(item of node.items; track item.name) {
+      <app-folder-item [node]="item"></app-folder-item>
+    }
+  </div>
+</div>

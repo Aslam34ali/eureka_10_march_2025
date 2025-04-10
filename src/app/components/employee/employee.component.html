@@ -1,0 +1,38 @@
+<div class="container border p-3 mt-3">
+    <h2 class="text-center">Employee List</h2>
+  
+    <div class="mb-3">
+      <label for="employeeFilter" class="form-label">Filter by:</label>
+      <select id="employeeFilter" class="form-select w-50"
+              [(ngModel)]="selectedFilter"
+              (change)="filterEmployees()">
+        <option value="allEmployees">All Employees</option>
+        <option value="maleEmployees">Male Employees</option>
+        <option value="femaleEmployees">Female Employees</option>
+      </select>
+    </div>
+  
+    <table *ngIf="employees.length > 0" class="table table-bordered table-hover">
+      <thead class="table-light">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Position</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employees">
+          <td>{{ emp.id }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.gender }}</td>
+          <td>{{ emp.position }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="employees.length === 0" class="alert alert-warning mt-3">
+      No employees found for the selected filter.
+    </div>
+  </div>
+  

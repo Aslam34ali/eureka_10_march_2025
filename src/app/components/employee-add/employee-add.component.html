@@ -1,0 +1,21 @@
+<div class="modal fade" id="addEmpModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Employee</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input class="form-control mb-2" [(ngModel)]="employee.name" placeholder="Name">
+          <input class="form-control mb-2" [(ngModel)]="employee.email" placeholder="Email">
+          <input class="form-control mb-2" [(ngModel)]="employee.salary" placeholder="Salary">
+          <input class="form-control mb-2" [(ngModel)]="employee.phone" placeholder="Phone">
+          <input class="form-control mb-2" [(ngModel)]="employee.address.city" placeholder="City">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-success" (click)="addEmployee()">Add Employee</button>
+        </div>
+      </div>
+    </div>
+  </div>

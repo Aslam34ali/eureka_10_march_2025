@@ -1,0 +1,52 @@
+
+    .navbar-walmart {
+      background-color: #0071dc;
+      padding: 0.5rem 1rem;
+      color: white;
+    }
+    .navbar-walmart .location-box {
+      background-color: #004f9a;
+      border-radius: 25px;
+      padding: 0.3rem 1rem;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    .navbar-walmart .location-box i {
+      margin-right: 0.5rem;
+    }
+    .navbar-walmart .search-bar {
+      border-radius: 25px;
+      padding: 0.3rem 1rem;
+      border: none;
+      width: 100%;
+    }
+    .navbar-walmart .search-wrapper {
+      background-color: white;
+      border-radius: 25px;
+      padding: 0.2rem;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+    .navbar-walmart .search-wrapper i {
+      color: #004f9a;
+      margin-right: 0.5rem;
+    }
+    .navbar-walmart .nav-link {
+      color: white;
+    }
+    .navbar-walmart .cart {
+      position: relative;
+    }
+    .navbar-walmart .cart-icon::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background-color: yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+ 

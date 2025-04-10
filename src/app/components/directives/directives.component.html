@@ -1,0 +1,50 @@
+<div class="border p-3 mt-4">
+    <h3 class="text-center">User Directory</h3>
+    <button class="btn btn-success mb-3" (click)="toggleView()">
+      Switch to {{ viewType === 'card' ? 'Table' : 'Card' }} View
+    </button>
+  
+    <!-- Card View -->
+    @if(viewType === 'card') {
+      <div class="d-flex flex-wrap gap-3">
+        @for(user of users; track user.id) {
+          <div class="card p-3 border shadow-sm" style="width: 250px;">
+            <h5>{{ user.name }}</h5>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Phone:</strong> {{ user.phone }}</p>
+            <p><strong>Company:</strong> {{ user.company.name }}</p>
+            <p><strong>City:</strong> {{ user.address.city }}</p>
+          </div>
+        }
+      </div>
+    }
+  
+    <!-- Table View -->
+    @if(viewType === 'table') {
+      <table class="table table-bordered mt-3">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Company</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(user of users; track user.id) {
+            <tr>
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.phone }}</td>
+              <td>{{ user.company.name }}</td>
+              <td>{{ user.address.city }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+  

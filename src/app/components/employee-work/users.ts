@@ -1,0 +1,95 @@
+const userData = [
+    {
+      id: 1,
+      name: 'Leanne Graham',
+      username: 'Bret',
+      email: 'Sincere@april.biz',
+      salary: '6000',
+      phone: '1-770-736-8031 x56442',
+      address: { city: 'Gwenborough' }
+    },
+    {
+      id: 2,
+      name: 'Ervin Howell',
+      username: 'Antonette',
+      email: 'Shanna@melissa.tv',
+      salary: '7000',
+      phone: '010-692-6593 x09125',
+      address: { city: 'Wisokyburgh' }
+    },
+    {
+      id: 3,
+      name: 'Clementine Bauch',
+      username: 'Samantha',
+      email: 'Nathan@yesenia.net',
+      salary: '8000',
+      phone: '1-463-123-4447',
+      address: { city: 'McKenziehaven' }
+    },
+    {
+      id: 4,
+      name: 'Patricia Lebsack',
+      username: 'Karianne',
+      email: 'Julianne.OConner@kory.org',
+      salary: '9000',
+      phone: '493-170-9623 x156',
+      address: { city: 'South Elvis' }
+    },
+    {
+      id: 5,
+      name: 'Chelsey Dietrich',
+      username: 'Kamren',
+      email: 'Lucio_Hettinger@annie.ca',
+      salary: '10000',
+      phone: '(254)954-1289',
+      address: { city: 'Roscoeview' }
+    },
+    {
+      id: 6,
+      name: 'Mrs. Dennis Schulist',
+      username: 'Leopoldo_Corkery',
+      email: 'Karley_Dach@jasper.info',
+      salary: '7500',
+      phone: '1-477-935-8478 x6430',
+      address: { city: 'South Christy' }
+    },
+    {
+      id: 7,
+      name: 'Kurtis Weissnat',
+      username: 'Elwyn.Skiles',
+      email: 'Telly.Hoeger@billy.biz',
+      salary: '6500',
+      phone: '210.067.6132',
+      address: { city: 'Howemouth' }
+    },
+    {
+      id: 8,
+      name: 'Nicholas Runolfsdottir V',
+      username: 'Maxime_Nienow',
+      email: 'Sherwood@rosamond.me',
+      salary: '8500',
+      phone: '586.493.6943 x140',
+      address: { city: 'Aliyaview' }
+    },
+    {
+      id: 9,
+      name: 'Glenna Reichert',
+      username: 'Delphine',
+      email: 'Chaim_McDermott@dana.io',
+      phone: '(775)976-6794 x41206',
+      salary: '9500',
+      address: { city: 'Bartholomebury' }
+    },
+    {
+      id: 10,
+      name: 'Clementina DuBuque',
+      username: 'Moriah.Stanton',
+      email: 'Rey.Padberg@karina.biz',
+      salary: '9800',
+      phone: '024-648-3804',
+      address: { city: 'Lebsackbury' }
+    }
+  ];
+  
+  export default userData;
+  

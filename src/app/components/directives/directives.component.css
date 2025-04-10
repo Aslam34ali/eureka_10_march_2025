@@ -1,0 +1,75 @@
+/* 🔷 Header Styling */
+h3 {
+    color: crimson;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* 🟩 Stylish Toggle Button */
+  .btn-success {
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-size: 15px;
+  }
+  
+  /* 🟨 Card Design */
+  .card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* 🟦 Responsive Card Grid */
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* 📱 Responsive Cards on Mobile */
+  @media (max-width: 768px) {
+    .card {
+      width: 100% !important;
+    }
+  }
+  
+  /* 📋 Table Styling */
+  table {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  thead {
+    background-color: #0d6efd;
+    color: white;
+  }
+  
+  th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 12px;
+  }
+  
+  td, th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+  }
+  
+  /* Border style */
+  .border {
+    border: 2px solid #dee2e6 !important;
+    border-radius: 10px;
+  }
+  
